@@ -16,7 +16,7 @@ RUN export DEBIAN_FRONTEND="noninteractive" && \
  && wget -O woboq.deb https://download.opensuse.org/repositories/home:/pansenmann:/woboq/Debian_9.0/amd64/woboq-codebrowser_2.1_amd64.deb \
  && dpkg -i woboq.deb \
  && rm woboq.deb \
- && apt-get purge wget \
+ && apt-get purge -qq wget \
  && apt-get clean \
  && apt-get autoclean \
  && rm -rf /var/lib/apt/lists/* \
